@@ -1,0 +1,359 @@
+/* 
+========================
+Base Reset and Setup
+======================== 
+*/
+
+/* Apply box-sizing to all elements and remove default margins and paddings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+========================
+Base Styles
+======================== 
+*/
+
+/* Set up body background with a gradient overlay and background image */
+body {
+  font-family: 'Verdana', Arial, sans-serif; /* Clean and readable font stack */
+  background: linear-gradient(rgba(235, 167, 212, 0.8), rgba(245, 198, 217, 0.8)),
+              url('backgroungpink.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensure background covers entire viewport */
+  color: #130000; /* Dark text color for readability */
+  line-height: 1.6; /* Improve line spacing */
+  font-size: 1rem; /* Set base font size */
+}
+
+/* 
+========================
+Typography
+======================== 
+*/
+
+/* Basic styles for all heading elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif; /* Give headings a classic look */
+  letter-spacing: 0.04em; /* Slight letter spacing for better appearance */
+  color: #a70f67; /* A soft purple shade for headings */
+  margin-bottom: 0.5em;
+  text-transform: capitalize; /* Capitalize first letter of each word */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Specific style for main page heading */
+h1 {
+  text-align: left;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border-left: 6px solid #ff6b6b; /* Bold left border for emphasis */
+  background-color: #ffffff; /* White background behind h1 */
+  color: #333333; /* Dark grey text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  font-size: 2.5em;
+  box-shadow: none; /* No box-shadow on h1 */
+  display: block;
+}
+
+/* Default styles for all links */
+a {
+  color: #15b5d5; /* Bright blue color for links */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+/* Hover and focus state for links */
+a:hover, a:focus {
+  color: #4b86b4; /* Slightly darker blue on hover */
+  text-decoration: underline;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a small shadow on hover */
+}
+
+/* Styles for unordered and ordered lists */
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* 
+========================
+Container Styles
+======================== 
+*/
+
+/* Basic styling for the main container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background: #edbcbc; /* Light pink background */
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(42, 77, 105, 0.08); /* Soft shadow for elevation */
+}
+
+/* 
+========================
+Navigation Bar
+======================== 
+*/
+
+/* Navigation bar setup using flexbox */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ea4248; /* Pinkish red background */
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+/* Navigation using grid layout for responsiveness */
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1em;
+  background: linear-gradient(135deg, #004e92, #000428); /* Blue gradient */
+  color: #e0e0e0;
+  padding: 1.5em 2em;
+  border: 2px solid #004e92;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+/* Link hover effect inside nav */
+nav a:hover, nav a:focus {
+  background-color: #fff;
+  color: #2a4d69; /* Dark blue text on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation list setup */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual navigation list items */
+nav ul li {
+  margin: 0.5em;
+}
+
+/* Styling links inside nav list */
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  background: none;
+}
+
+/* Responsive nav styles for smaller screens */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0.5em;
+  }
+}
+
+/* 
+========================
+Container and Background Effects
+======================== 
+*/
+
+/* Applying a soft gradient background to container */
+.container {
+  background: linear-gradient(135deg, #eebaf7 80%, #9d6c96 100%);
+  box-shadow: 0 8px 32px rgba(42, 77, 105, 0.12);
+}
+
+/* Adding a soft text shadow to h1 */
+h1 {
+  text-shadow: 1px 2px 6px #e3e9f1;
+}
+
+/* 
+========================
+Blockquotes
+======================== 
+*/
+
+/* Styling blockquotes for better visibility */
+blockquote {
+  border-left: 4px solid #bf5117;
+  padding-left: 1em;
+  font-style: italic;
+  color: #4b86b4;
+  background: #f9fafb;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+========================
+Accessibility Improvements
+======================== 
+*/
+
+/* Strong focus outlines for accessibility */
+a:focus {
+  outline: 3px solid #f37736;
+  outline-offset: 4px;
+}
+
+/* Skip link styles for keyboard navigation */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Show skip link when it receives focus */
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background: #f37736;
+  color: #fff;
+  padding: 0.5em;
+  z-index: 1000;
+}
+
+/* 
+========================
+Special Elements
+======================== 
+*/
+
+/* Hiding unwanted star effects */
+#styles .features::after,
+.features.patterned::after {
+  display: none;
+}
+
+/* How-it-works section styling */
+.how-it-works {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Styling stage headings */
+.style-stage-heading {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #f37736;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured styles box */
+.featured-styles {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* 
+========================
+SVG and Layouts
+======================== 
+*/
+
+/* Basic styling for svg icons */
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header container layout */
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 
+========================
+Features Grid
+======================== 
+*/
+
+/* Main features grid layout */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* Individual feature cards */
+.features li {
+  flex: 1 1 calc(33.333% - 1em);
+  max-width: 300px;
+  background-color: #dc698b;
+  border: 2px solid #9f9696;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+}
+
+/* Span inside each feature */
+.features li span {
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* Links inside feature cards */
+.features li a {
+  text-decoration: none;
+  color: #e8ebeb;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for feature links */
+.features li a:hover {
+  color: #f37736;
+}
+
+/* Responsive feature grid adjustments */
+@media (max-width: 700px) {
+  .features li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+/* citation: w3schools.com and codeacademy.com */
